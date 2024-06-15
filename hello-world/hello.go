@@ -11,6 +11,7 @@ const (
 // emptyPhrase = "Hello World !"
 )
 
+// Hello will greet you by your name and in your langage
 func Hello(name string, langage string) string {
 	if name == "" {
 		name = "World"

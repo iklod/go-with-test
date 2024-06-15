@@ -1,6 +1,7 @@
 package integers
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -12,4 +13,10 @@ func TestAdder(t *testing.T) {
 			t.Errorf("want %d, got %d", expected, sum)
 		}
 	})
+}
+
+func ExampleAdd() {
+	sum := Add(1, 5)
+	fmt.Println(sum)
+	// Output: 6
 }
