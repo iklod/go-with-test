@@ -7,22 +7,31 @@ type Shape interface {
 }
 
 type Rectangle struct {
-	width  float64
-	height float64
+	Width  float64
+	Height float64
 }
 
 func (r Rectangle) Area() float64 {
-	return r.width * r.height
+	return r.Width * r.Height
 }
 
 func (r Rectangle) Perimeter() float64 {
-	return r.width*2 + r.height*2
+	return r.Width*2 + r.Height*2
 }
 
 type Circle struct {
-	radius float64
+	Radius float64
 }
 
 func (c Circle) Area() float64 {
-	return c.radius * c.radius * math.Pi
+	return c.Radius * c.Radius * math.Pi
+}
+
+type Triangle struct {
+	Base   float64
+	Height float64
+}
+
+func (t Triangle) Area() float64 {
+	return (t.Base * t.Height) / 2
 }
